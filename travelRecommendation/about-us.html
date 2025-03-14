@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <i class="fa fa-plane" style="font-size:36px;"></i>
+            <h1>TravelBloom</h1>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Enter a destination or keyword" class="search-input">
+            <button onclick="performSearch()" class="search-btn">Search</button>
+            <button onclick="resetSearch()" class="clear-btn">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Home Page Content -->
+    <header>
+        <div class="social-line"></div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="header-content">
+            <h1>About Us</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <button>Book Now</button>
+        </div>
+    </header>
+
+<script>
+    function performSearch() {
+        // Functionality to search for recommendations
+        var input = document.getElementById('searchInput').value;
+        alert('Search for: ' + input);
+    }
+
+    function resetSearch() {
+        // Functionality to clear the search input
+        document.getElementById('searchInput').value = '';
+    }
+</script>
+</body>
+
+<style>
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+nav .logo {
+    width: 265px;
+    display: flex;
+}
+nav .logo i, nav .logo h1 {
+    margin: 10px 0 10px 10px;
+    line-height: 5px;
+}
+nav .logo img {
+    width: 100px;
+    height:70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+align-items: center;
+background: #ffffff;
+padding: 10px;
+border-radius: 80px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+min-width: 350px;
+}
+
+.search-input {
+    flex-grow: 1;
+padding: 8px 10px;
+margin-right: 10px;
+border: 1px solid #fff;
+border-radius: 5px;
+outline: none;
+font-size: .8em;
+}
+.search-input::placeholder {
+    color: #027579;
+
+}
+
+.search-input:focus {
+    border-color: #fff; /* Highlight color when focused */
+}
+
+.search-btn, .clear-btn {
+    padding: 8px 15px;
+    color: white;
+    background-color: #027579; /* Teal background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none;
+}
+
+.search-btn:hover, .clear-btn:hover {
+    background-color: #027579; /* Darker shade for hover */
+}
+
+.clear-btn {
+    margin-left: 5px; /* Space between buttons */
+   }
+
+.clear-btn:hover {
+    background-color: #e64a19; /* Darker shade for hover on clear button */
+}
+
+/* Header styling */
+header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    background-image: linear-gradient(to right, rgba(2, 117, 121, 0.5), transparent), url('img/city.jpeg');
+
+
+}
+.header-content {
+    margin: 100px 0 0 200px;
+    width: 50%;
+}
+
+.header-content h1 {
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    width: 60%;
+    line-height: 1.5;
+}
+
+.header-content button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #027579;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header-content button:hover {
+    background-color: #e03c00;
+}
+.social-icons {
+    position: absolute;
+top: 50%;
+left: 10px;
+height: 150px;
+}
+.social-icons ul {
+display:flex;
+    flex-direction: column;
+}
+.social-icons ul li {
+    margin-bottom:10px;
+}
+.social-icons ul li a {
+    color: white;
+    font-size: 1.9em;
+    text-decoration:none;
+}
+.social-line {
+    position: absolute;
+    top: 17%;
+    left: 10px;
+    width: 2px;
+    height: 250px;
+    background-color: white;
+    margin-left: 55px;
+}
+    </style>
+</html>
