@@ -14,6 +14,7 @@ nav {
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    height:60px;
 }
 
 nav .logo {
@@ -101,12 +102,12 @@ header {
     background-position: center;
     display: flex;
     color: white;
-    background-image: linear-gradient(to right, rgba(2, 117, 121, 0.5), transparent), url('img/city.jpeg');
+    background-image: linear-gradient(to right, rgba(2, 117, 121, 0.6), transparent), url('img/city.jpeg');
 
 
 }
 .header-content {
-    margin: 100px 0 0 200px;
+    margin: 100px 50px 0 200px;
     width: 50%;
 }
 .header-content h1 {
@@ -126,9 +127,9 @@ header {
 }
 .about>p {
     padding: 15px;
-    background:rgba(0, 0, 0, 0.3);
+    background:rgba(0, 0, 0, 0.4);
     width: 100%;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 
@@ -153,6 +154,7 @@ height: 150px;
 .social-icons ul {
 display:flex;
     flex-direction: column;
+    list-style-type: none;
 }
 .social-icons ul li {
     margin-bottom:10px;
@@ -188,8 +190,8 @@ display:flex;
     display:flex;
     align-items: flex-start;
     padding:15px;
-    background:rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
+    background:rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
     margin-right: 10px;
 
 }
@@ -204,4 +206,74 @@ display:flex;
 }
 .staff-members>div>div p {
     font-size: .8em;
+}
+
+.contact {
+    display: flex;
+    width:100%;
+    height: 600px;
+    justify-content: space-between;
+    
+}
+.contact-form {
+    width:50%;
+    padding:20px;
+    background:rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.contact>div:first-of-type {
+    margin: 100px 50px 0 0;
+
+}
+
+.contact-form form > * {
+    margin-bottom: 25px;
+}
+.contact-form form input, .contact-form form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    outline: none;
+    background: none;
+}
+
+.results {
+    position:absolute;
+    top:75px;
+    right:50px;
+
+
+}
+.results>div {
+    margin: 10px;
+    border-radius:5px;
+    background: white;
+    width: 360px;
+}
+.results > div img {
+    max-width: 360px;
+    max-height: 200px; 
+    object-fit: cover; 
+    width: 100%; 
+}
+
+.results>div h3, .results>div p, .results>div button {
+    padding: 10px;
+    margin:0;
+}
+
+.results>div button {
+    background-color: #027579;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px 10px;
 }
